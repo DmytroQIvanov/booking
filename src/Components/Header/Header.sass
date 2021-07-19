@@ -1,0 +1,96 @@
+$main-color: #FFA801
+$header-height: 88px
+.header
+    height: $header-height
+    width: 100%
+    background: #FFFFFF
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1)
+    .header__container
+        padding: 15px
+        margin-left: 12vw
+        margin-right: 12vw
+        justify-content: space-between
+        display: flex
+        .header__burger-content
+            display: none
+            .header__burger-btn-container
+                display: flex
+                .header__burger-btn
+                    width: 30px
+                    height: 3px
+                    background-color: #444
+                    margin: 10px
+                    &::after
+                        cursor: pointer
+                        content: ''
+                        display: block
+                        margin-top: 8px
+
+                        width: 30px
+                        height: 3px
+                        background-color: #444
+                    &::before
+                        display: block
+                        content: ''
+                        margin-top: 10px
+
+                        width: 30px
+                        height: 3px
+                        background-color: #444
+
+        @media screen and ( max-width:1200px)
+            margin: 0px
+            font-size: 0.4em
+        @media screen and ( max-width:940px)
+            font-size: 0.4em
+            .header__burger-content
+                display: flex
+
+        .header__main-content
+            font-size: 15px
+            display: flex
+            color: red
+            justify-content: space-between
+            @media screen and ( max-width:940px)
+                display: none
+
+            .header__log-in-button
+                border: none
+                background-color: $main-color
+                margin: 10px
+                text-decoration: none
+                line-height: 30px
+
+                border-radius: 7px
+                width: 171px
+
+            .header__logo
+                height: 50%
+                margin-top: auto
+                margin-bottom: auto
+
+            .header__regular-button
+                padding: none
+                text-align: center
+                text-transform: uppercase
+                border: none
+                background-color: #33333300
+                transition-duration: 0.3s
+                margin: 0.2em
+                text-decoration: none
+                appearance: auto
+
+                align-items: flex-start
+                box-sizing: border-box
+                // border: 1px solid black
+                line-height: 44px
+                color: black
+                // font-size: 14px
+
+                // margin: 20px
+                &:hover
+                    color: #FFA801
+
+        .header__regular-button_active
+
+        .header__nav-panel

@@ -1,0 +1,114 @@
+$main-color: #FFA801
+.ad-component
+    width: 100%
+    border: 1px solid #DDDDDD
+    box-sizing: border-box
+    border-radius: 6px
+
+    margin: 30px auto
+    @media ( max-width: 200px )
+        font-size: 0.4em
+
+    .ad-component__main
+        display: flex
+        justify-content: space-between
+
+        img
+            width: 25%
+            // height: 50%
+            border-radius: 5px
+            margin: auto 10px
+            border: 1px solid black
+            // @media screen and ( max-width:700px  )
+                // height: 50%
+
+        .ad-component__section
+            // border: 1px solid black
+            margin: 5px
+            width: 100%
+            text-align: left
+            padding: 5px
+            .ad-component__location
+                &::before
+                    content: url('./assets/M.svg')
+                    margin: 3px
+            .ad-component__active
+                color: green
+                display: flex
+                &::after
+                    margin: 2px
+                    margin-left: 8px
+                    content: url('./assets/mail.svg')
+            .ad-component__not-active
+                color: red
+                display: flex
+                &::after
+                    margin: 2px
+                    margin-left: 8px
+                    content: url('./assets/mail.svg')
+        .ad-component__aside
+            width: 50%
+            text-align: left
+            margin: 8px
+
+            .ad-component__top-price
+                margin-left: 10px
+                float: right
+                &::after
+                    content: url('./assets/pencil.svg')
+                    margin: 5px
+            .ad-component__statistics
+                display: flex
+                &::before
+                    margin-left: 5px
+                    margin-right: 5px
+                    content: url('./assets/eye.svg')
+        @media screen and ( max-width:768px  )
+            flex-flow: column
+            margin: auto
+            img
+                width: 95%
+                margin: auto
+                margin-top: 5px
+
+            aside
+                display: flex
+                div
+                    margin: auto
+
+    footer
+        div
+            display: flex
+            img
+
+                margin: 8px
+                margin-left: 15px
+                @media screen and ( max-width: 200px )
+                    width: 10px
+                    margin: 1px
+    .ad-component__footer-control-panel
+        display: flex
+        justify-content: space-between
+        padding: 15px
+        font-size: 0.8em
+        @media screen and ( max-width:  750px)
+            display: flex
+            flex-wrap: wrap
+
+        .ad-component__control-button
+            margin: 5px
+            font-size: 12px
+            font-weight: 600
+            border: none
+            padding: 12px
+            background-color: #DFDFDF
+            border-radius: 7px
+        .ad-component__control-button_active
+            background-color: $main-color
+        .ad-component__edit
+            display: flex
+            margin: 9px
+            &::before
+                content: url('./assets/pencil.svg')
+                margin: 3px
+                margin-right: 8px
